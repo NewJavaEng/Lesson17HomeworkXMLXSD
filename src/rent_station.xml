@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<station xmlns="http://www.example.org/rent_station_schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/rent_station_schema rent_station_schema.xsd">
+		<equipment>
+			<cycle id="1">
+				<title>cycle1</title>
+				<category>summer</category>
+				<color>red</color>
+				<height>60</height>
+			</cycle>
+			<cycle id="2">
+				<title>cycle2</title>
+				<category>winter</category>
+				<color>green</color>
+				<height>63</height>
+			</cycle>
+			<cycle id="3">
+				<title>cycle3</title>
+				<category>summer</category>
+				<color>red</color>
+				<height>68</height>
+			</cycle>
+			<roller id="4">
+				<title>roller1</title>
+				<category>winter</category>
+				<color>blue</color>
+				<wheelamount>6</wheelamount>
+			</roller>
+			<roller id="5">
+				<title>roller2</title>
+				<category>summer</category>
+				<color>red</color>
+				<wheelamount>8</wheelamount>
+			</roller>
+			<roller id="6">
+				<title>roller3</title>
+				<category>summer</category>
+				<color>green</color>
+				<wheelamount>10</wheelamount>
+			</roller>
+		</equipment>
+		<accessory>
+			<helmet id="7">
+				<title>roller3</title>
+				<category>winter</category>
+				<color>blue</color>
+				<size>12</size>
+			</helmet>
+			<helmet id="8">
+				<title>roller3</title>
+				<category>summer</category>
+				<color>red</color>
+				<size>13</size>
+			</helmet>
+			<helmet id="9">
+				<title>roller3</title>
+				<category>summer</category>
+				<color>green</color>
+				<size>14</size>
+			</helmet>
+			<kneepad id="10">
+				<title>knee pad 1</title>
+				<category>summer</category>
+				<size>9</size>
+				<securityclass>first</securityclass>
+			</kneepad>
+			<kneepad id="11">
+				<title>knee pad 2</title>
+				<category>summer</category>
+				<size>11</size>
+				<securityclass>second</securityclass>
+			</kneepad>
+			<kneepad id="12">
+				<title>knee pad 3</title>
+				<category>winter</category>
+				<size>13</size>
+				<securityclass>third</securityclass>
+			</kneepad>
+		</accessory>
+</station>

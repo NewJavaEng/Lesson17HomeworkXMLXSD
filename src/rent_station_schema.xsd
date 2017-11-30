@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/rent_station_schema" xmlns:tns="http://www.example.org/rent_station_schema"
+	elementFormDefault="qualified">
+
+	<xs:element name="station">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="equipment" type="tns:EquipmentType" />
+				<xs:element name="accessory" type="tns:AccessoryType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="EquipmentType">
+		<xs:sequence>
+			<xs:element name="cycle" type="tns:Cycle" minOccurs="1"
+				maxOccurs="unbounded" />
+			<xs:element name="roller" type="tns:Roller" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="AccessoryType">
+		<xs:sequence>
+			<xs:element name="helmet" type="tns:Helmet" minOccurs="1"
+				maxOccurs="unbounded" />
+			<xs:element name="kneepad" type="tns:KneePad" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="AssortmentType">
+		<xs:sequence>
+			<xs:element name="title" type="xs:string" />
+			<xs:element name="category" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:integer" />
+	</xs:complexType>
+
+	<xs:complexType name="Cycle">
+		<xs:complexContent>
+			<xs:extension base="tns:AssortmentType">
+				<xs:sequence>
+					<xs:element name="color" type="xs:string" />
+					<xs:element name="height" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Roller">
+		<xs:complexContent>
+			<xs:extension base="tns:AssortmentType">
+				<xs:sequence>
+					<xs:element name="color" type="xs:string" />
+					<xs:element name="wheelamount" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Helmet">
+		<xs:complexContent>
+			<xs:extension base="tns:AssortmentType">
+				<xs:sequence>
+					<xs:element name="color" type="xs:string" />
+					<xs:element name="size" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="KneePad">
+		<xs:complexContent>
+			<xs:extension base="tns:AssortmentType">
+				<xs:sequence>
+					<xs:element name="size" type="xs:integer" />
+					<xs:element name="securityclass" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+</xs:schema>
